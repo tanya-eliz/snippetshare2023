@@ -1,0 +1,9 @@
+.homebody{
+    padding: 3%;
+}
+
+.expiry{
+    display: flex;
+    align-items: center; 
+    margin-top: 2%;
+}
