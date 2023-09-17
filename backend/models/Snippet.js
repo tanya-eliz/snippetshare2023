@@ -5,7 +5,7 @@ const schema = Schema({
   content: String,
   expiry: {
     type: Date,
-    required: false,
+    default: undefined,
     index: {
       expires: 0,
     }
@@ -23,9 +23,11 @@ const schema = Schema({
 // operation that is controlled by the MongoDB server itself, so it is not guaranteed that
 // the records will be deleted immediately after the expiry time.
 schema.pre('save', function(next) {
+  console.log(`pre save: ${this.expiry}`)
   if (this.expiry !== undefined) {
     // Calculate the offset in milliseconds
-    const offset = this.expiry - Date.now();
+    const offset = this.expiry - this.createdAt;
+    console.log(`pre save: ${offset}`);
     this.expiry.index = {
       expires: offset,
     }
