@@ -1,0 +1,33 @@
+.snippets-page{
+    padding: 3%;
+    padding-top:2.5%;
+}
+
+.header-row{
+    border-bottom: 2px solid #14213D;
+}
+
+.header{
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+img{
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.cell{
+    padding: 12px !important;
+}
+
+.pagi-align {
+    display: flex;
+    align-items: center;
+}
+  
+
+.table-body{
+    margin-top:1%;
+}

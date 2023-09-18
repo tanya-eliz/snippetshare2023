@@ -30,8 +30,6 @@ The purpose of this application is to allow users to create snippets of text tha
 2. Run `docker-compose up --build` to rebuild and restart the application.
 
 
-
-
 ### Tear down and Clean-up
 1. Press `Ctrl + C` to stop the application.
 2. Run `docker-compose down` to stop the containers.

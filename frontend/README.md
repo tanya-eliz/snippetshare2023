@@ -1,70 +1,279 @@
-# Getting Started with Create React App
+# Frontend Repository
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Design Thinking Process: Figma Planning
 
-## Available Scripts
+[View Figma Design](https://l1nq.com/govtech-figma-tanya)
 
-In the project directory, you can run:
 
-### `npm start`
+1. **Page 1: Create Snippets**
+   - Users can create snippets with the following details:
+     - Title
+     - Text/Code content
+     - Time to expiry (drop-down selection)
+   - Upon submission, a unique URL is generated for the snippet.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Page 2: Snippet List**
+   - Users can view all existing snippets.
+   - Displayed information includes:
+     - Snippet title
+     - View count per snippet
+     - Time to expiry per snippet
+   - Users can:
+     - Sort the list by:
+       1. Most recently uploaded snippet
+       2. Highest view count
+     - Navigate through pages using pagination (e.g., after 10 snippets, users can click to the next page).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Page 3: Viewing Individual Snippets**
+   - Upon entering a unique URL or clicking a snippet from the view list, users can:
+     - View the snippet content
+     - See the view count
+     - Check the time to expiry
+     - Upon page refresh, the view count increases by 1
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features ##
 
-### `npm run build`
+## <span style="font-size: 16px">Feature 1: Create New Snippet</span>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+User can input snippet title, multiline content of snippet, and set the time to expiry for each snippet. Upon clicking "custom", the user can input a custom time to expiry in terms of weeks, days, hours, and minutes. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Upon snippet creation, the user will be given a unique URL to access the newly created snippet. The URL can be copied to the clipboard in a UI popup.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## <span style="font-size: 16px">Feature 2: View All Snippets</span>
 
-### `npm run eject`
+User can view all uploaded snippets, including snippet upload time and view count per snippet.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+User can sort all snippets by most recent upload or by descending view count.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## <span style="font-size: 16px">Feature 3: View Individual Snippet</span>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+User can click into each individual snippet to view individual snippets. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+User can view snippet title, content, time to expiry, and view count and copy content to the clipboard.
 
-## Learn More
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies ##
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The following tools were used in this project:
 
-### Code Splitting
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [Material UI](https://mui.com/material-ui/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Folder Structure ##
 
-### Analyzing the Bundle Size
+> <details>
+>   <summary><span style="font-size: 18px">📦 src</span></summary>
+>   <ul>
+>     <details>
+>       <summary>📂 assets</summary>
+>       <ul>
+>         <li>
+>           📜sort.png
+>         </li>
+>         <li>
+>           📜visible.png
+>         </li>
+>       </ul>
+>     </details>
+>     <details>
+>       <summary>📂 atoms</summary>
+>       <ul>
+>         <li>📂Button
+>           <ul><li>📜Button.js</li></ul>
+>         </li>
+>         <li>📂Copy
+>           <ul><li>📜Copy.js</li></ul>
+>         </li>
+>         <li>📂Pagination
+>           <ul><li>📜Pagination.js</li></ul>
+>         </li>
+>         <li>📂Sort
+>           <ul><li>📜Sort.js</li></ul>
+>         </li>
+>         <li>📂TimePicker
+>           <ul>
+>             <li>📜TimePicker.css</li>
+>             <li>📜TimePicker.js</li>
+>           </ul>
+>         </li>
+>       </ul>
+>     </details>
+>     <details>
+>       <summary>📂 components</summary>
+>       <ul>
+>       <li>📂Home
+>         <ul>
+>           <li> 📜Home.css</li>
+>           <li>📜Home.js</li>
+>         </ul>
+>       </li>
+>       <li> 📂NavBar
+>         <ul>
+>           <li>📜NavBar.css</li>
+>           <li>📜Navbar.js</li>
+>         </ul>
+>       </li>
+>       <li>📂Snippets
+>       <ul>
+>         <li>📂Snippets.css</li>
+>         <li>📂Snippets.js</li>
+>       </ul>
+>       </li>
+>       <li>📂ViewSnippet
+>         <ul>
+>           <li>📜View.css</li>
+>           <li>📜View.js</li>
+>         </ul>
+>       </li>
+>       <li>useFetch.js</li>
+>     </details>
+>     <details>
+>       <summary>📂 pages</summary>
+>       <ul>
+>         <li>📂HomePage
+>           <ul><li>HomePage.js</li></ul>
+>         </li>
+>         <li>📂SnippetsPage
+>           <ul><li>SnippetsPage.js</li></ul>
+>         </li>
+>         <li>📂ViewPage
+>           <ul><li>ViewPage.js</li></ul>
+>         </li>
+>       </ul>
+>     </details>
+>     <details>
+>       <summary>📂 theme</summary>
+>       <ul><li>📜Theme.js</li></ul>
+>     </details>
+>     <li>📜App.css</li>
+>     <li>📜App.js</li>
+>     <li>📜App.test.js</li>
+>     <li>📜index.css</li>
+>     <li>📜reportWebVitals.js</li>
+>     <li>📜setupTests.js</li>
+>   </ul>
+> </details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Atomic Components (Atoms) 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This directory contains atomic components, which are the smallest, reusable building blocks of the React application's user interface. Atomic components are easy to reuse and are independent of each other.
 
-### Advanced Configuration
+#### Table of Contents
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [Button](#button)
+- [Copy](#copy)
+- [Pagination](#pagination)
+- [Sort](#sort)
+- [TimePicker](#timepicker)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Button
 
-### `npm run build` fails to minify
+The `Button` atom has four variants, namely the root button, "save" button for any confirmation purposes, the "disabled" variant and the "pagi" variant for pagination.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Usage:**
+
+```jsx
+import DefaultButton from '../../atoms/Button/Button';
+
+// Example usage
+<DefaultButton label ={'Create Snippet'} disabled = {disabled} variant={variant} align='center' onClick={handleSubmit}/> 
+```
+
+#### Copy
+
+The `Copy` atom allows users to copy selected content to the clipboard. In this case, it was used to copy the unique URL of each snippet or the snippet content.
+
+**Usage:**
+
+```jsx
+import CopyToClipboardButton from '../../atoms/Copy/Copy';
+
+// Example usage
+<CopyToClipboardButton textCopy={url}/>
+```
+
+#### Pagination
+
+The `Pagination` component allows users to navigate through pages of uploaded snippets. It displays the current page number and the total number of pages.
+
+**Usage:**
+
+```jsx
+import Pagination from '../../atoms/Pagination/Pagination';
+
+// Example usage
+<Pagination currPageNum={page} totalPage={totalPage}/>
+
+```   
+#### Sort
+
+The `Sort` component provides sorting functionality for the view snippet table. Users can sort by most recent upload or by descending view count.
+
+**Usage:**
+
+```jsx
+import Sort from '../../atoms/Sort/Sort'
+
+// Example usage
+<Sort sort={sort} setSort={setSort}/>
+
+```
+#### TimePicker
+
+The `TimePicker` component allows users to a custom time to expiry for each snippet. Users can input a custom time to expiry in terms of weeks, days, hours, and minutes.
+
+**Usage:**
+
+```jsx
+import TimePicker from '../../atoms/TimePicker/TimePicker';
+
+// Example usage
+{option === 'Custom' && 
+  <TimePicker setCustom={setCustom}/>}
+
+```
+
+  ### Components
+
+This directory contains various components that make up different parts of the React application's user interface. These components serve as building blocks for constructing the application's views and user interactions.
+
+#### Table of Contents
+
+- [Home](#home)
+- [NavBar](#navbar)
+- [Snippets](#snippets)
+- [ViewSnippet](#viewsnippet-individual-snippet)
+
+---
+
+#### Home
+
+The `Home` component represents the core functionality of the application. It allows users to create a new snippet and navigate to the view snippets page.
+
+#### NavBar
+
+The `NavBar` component represents the navigation bar of the application. It contains links to the home page and the view snippets page.
+
+#### Snippets
+
+The `Snippets` component represents the view snippets page of the application. It contains a table of all uploaded snippets, including snippet upload time and view count per snippet.
+
+#### ViewSnippet (Individual Snippet)
+
+The `ViewSnippet` component represents the individual snippet page of the application. It contains the title, content, time to expiry, and view count of the individual snippet.
+
+## Future Improvements:
+1. Implementing a user authentication system and a search bar to search for snippets by title.
+2. Code refactoring to improve code readability and maintainability.
+3. Increasing test coverage for frontend.
+
+
+## Instructions to run the application:
+- Head back to the root directory and run ```docker-compose up``` to start the containers for the application as specified in the root directory's [instructions](../Readme.md).
+- Once the containers are up and running, the frontend application can be accessed at http://localhost:3000.
