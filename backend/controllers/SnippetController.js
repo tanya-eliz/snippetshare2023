@@ -3,7 +3,7 @@ import { BadRequestError, ExpiredError, NotFoundError } from "../errors/CustomEr
 
 // Utility Function to map ttlObject to get time offset in milliseconds
 const getTimeOffset = (tteOject) => {
-  const { never, seconds, minutes, hours, days, months, years } = tteOject;
+  const { never, seconds, minutes, hours, days, weeks, months, years } = tteOject;
   let offset = 0;
   if (never) {
     return -1
@@ -19,6 +19,9 @@ const getTimeOffset = (tteOject) => {
   }
   if (days) {
     offset += Number(days) * 24 * 60 * 60 * 1000;
+  }
+  if (weeks) {
+    offset += Number(weeks) * 7 * 24 * 60 * 60 * 1000;
   }
   if (months) {
     offset += Number(months) * 30 * 24 * 60 * 60 * 1000;
