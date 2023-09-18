@@ -7,9 +7,11 @@ import './View.css';
 import TextField from '@mui/material/TextField';
 import CopyToClipboardButton from '../../atoms/Copy/Copy';
 
+const BE_API_URL = process.env.BE_API_URL || 'http://localhost:4000';
+
 export const View = () => {
     const {id} = useParams();
-    const {data: snippets, isPending, error} = useFetch('http://localhost:4000/api/snippets/' + id);
+    const {data: snippets, isPending, error} = useFetch(`${BE_API_URL}/api/snippets/`+ id);
     const [seconds, setSeconds] = useState(0);
     const [countDown, setCountDown] = useState(null);
 

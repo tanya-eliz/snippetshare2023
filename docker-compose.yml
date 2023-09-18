@@ -12,8 +12,8 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=$MONGODB_PASSWORD
     volumes:
       - db2:/data/db
-    ports:
-      - 27017:27017
+    # ports:
+    #   - 27017:27017
     networks:
       - backend-network
 
@@ -31,15 +31,15 @@ services:
       - FE_URL=http://localhost:3000
     networks:
       - backend-network
-## FOR SUBMISSION: Uncomment this and it will use NGINX to serve the frontend
-  # frontend:
-  #   build: ./frontend
-  #   ports:
-  #     - 3000:80
-  #   restart: unless-stopped
-  #   depends_on:
-  #     - backend
-  #   environment:
-  #     - BE_API_URL=http://localhost:4000
+# FOR SUBMISSION: Uncomment this and it will use NGINX to serve the frontend
+  frontend:
+    build: ./frontend
+    ports:
+      - 3000:80
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      - BE_API_URL=http://localhost:4000
 volumes:
   db2:
