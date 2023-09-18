@@ -16,6 +16,8 @@ import Grid from '@mui/material/Grid';
 import { Link } from "react-router-dom";
 import useFetch from '../../components/ViewSnippet/useFetch';
 
+const BE_API_URL = process.env.BE_API_URL || 'http://localhost:4000';
+
 export const Snippets = () => {
   const [rowdata, setRowData] = useState([]);
   const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -31,7 +33,7 @@ export const Snippets = () => {
     } else if (rowdata.length && sort === 'View Count') {
       queryString += '&orderBy=viewCount';
     }
-    customFetch('http://localhost:4000/api/snippets' + queryString);
+    customFetch(`${BE_API_URL}/api/snippets` + queryString);
   }, [sort, page, rowdata.length, rowsPerPage]);
 
   const customFetch = async (url) => {

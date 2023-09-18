@@ -19,6 +19,8 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import CopyToClipboardButton from '../../atoms/Copy/Copy';
 
+const BE_API_URL = process.env.BE_API_URL || 'http://localhost:4000';
+
 // dropdown styling
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -80,7 +82,7 @@ export const Home = () => {
 
     const handleSubmit = async() => {
         try {
-            const response = await fetch('http://localhost:4000/api/snippets', {
+            const response = await fetch(`${BE_API_URL}/api/snippets`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
