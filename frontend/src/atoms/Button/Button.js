@@ -4,13 +4,6 @@ import Box from '@mui/material/Box';
 const styles = {
     "&.MuiButton-root":{
         borderRadius: '6px',
-        padding: '1%',
-        marginTop: '1%',
-        width: '20%',
-        minWidth: '175px',
-        minHeight: '50px',
-        maxWidth: '250px',
-        maxHeight: '50px',
         textTransform: 'unset ! important',
         fontSize: '16px'
     },
@@ -18,17 +11,31 @@ const styles = {
         backgroundColor: '#14213D',
         border: '1px solid #14213D',
         color: '#FFFFFF',
+        padding: '1%',
+        marginTop: '1%',
+        width: '20%',
+        minHeight: '50px',
+        maxWidth: '250px',
+        minWidth: '175px',
+        maxHeight: '50px',
     },
     "&.MuiButton-pagi":{
         backgroundColor: 'none',
-        width: '50%',
-        fontSize: '12px',
+        minWidth: '102px',
+        fontSize: '14px',
         color: '#727272'
     },
     "&.Mui-disabled":{
         backgroundColor: '#9FA1AD',
         border: '1px solid #9FA1AD',
-        color: '#ffffff'
+        color: '#ffffff',
+        padding: '1%',
+        marginTop: '1%',
+        width: '20%',
+        minHeight: '50px',
+        maxWidth: '250px',
+        minWidth: '175px',
+        maxHeight: '50px',
     },
 };
 

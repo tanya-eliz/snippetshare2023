@@ -7,33 +7,14 @@ const Theme = createTheme({
             fontWeight: 'bold',
             fontSize: '20px',
         },
-
-        header:{
-            color: '#FAFAFA',
-            fontWeight: 'semibold',
-            fontSize: '20px',
-        },
-        tableLabel:{
-            color: '#11142D',
-            fontSize: '18px',
-            fontWeight: '600',
-        },
-        tableContent:{
-            color: '#11142D',
-            fontSize:'16px',
-        },
         tablePagi:{
             fontSize: '14px',
             color: '#727272'
         },
         sort: {
             fontSize: '14px'
-
         },
-        emptyTable: {
-            fontSize: '20px',
-            fontWeight: '600'
-        },
+        
     },
 
     components:{

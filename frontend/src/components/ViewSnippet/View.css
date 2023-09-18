@@ -1,0 +1,22 @@
+.view-body{
+    padding: 3%;
+    padding-top:2.5%;
+}
+
+.content-body{
+    margin: 1% 0 1% 0 !important;
+}
+
+.view-count{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.copy-button{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
