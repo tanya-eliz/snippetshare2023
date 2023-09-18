@@ -98,14 +98,22 @@ There are currently only 3 API endpoints to serve the frontend application. The 
 
 3) Cors is implemented to only allow cross-origin requests from the frontend application and restricting it to only GET and POST requests.
 
+## Automated Tests:
+1) Automated tests are implemented using Jest and MongoDB Memory Server.
+2) The tests are located in the `tests` folder in this backend repository.
+3) To run the tests, you will need to have the backend application running on your machine. As in memory MongoDB is used for testing, you do not need to have MongoDB installed on your machine nor do you need the docker containers to be running. But you will need to have Node.js installed on your machine.
+4) If this is your first time running the tests, you will need to run `npm install` in the `backend` folder to install the required dependencies.
+5) Once the dependencies are installed, you can run `npm test` in the `backend` folder to run the tests.
 
 ## Future Improvements:
 1) Implementing features like rate limiting and authentication.
 2) Implementing a more robust validation system for the API endpoints.
 3) Refactoring the code and extracting logic from the controller to services.
+4) Increasing Test Coverage
 
 
 ## Instructions to run the application:
 - Head back to the root directory and run ```docker-compose up``` to start the containers for the application as specified in the root directory's [instructions](../Readme.md).
 - Once the containers are up and running, the backend application can be accessed at http://localhost:4000.
+
 
