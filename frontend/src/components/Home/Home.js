@@ -116,7 +116,7 @@ export const Home = () => {
     }
     
     return (
-        <Box
+        <Box data-testid="home"
         component="form"
         sx={{
             maxWidth: '100%',
