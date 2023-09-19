@@ -268,10 +268,17 @@ The `Snippets` component represents the view snippets page of the application. I
 
 The `ViewSnippet` component represents the individual snippet page of the application. It contains the title, content, time to expiry, and view count of the individual snippet.
 
+## Automated Tests:
+1) Automated tests are implemented using Jest and the React testing library.
+2) The tests are located in the `__tests__` folder in this frontend repository.
+3) To run the tests, you will need to have the frontend application running on your machine.
+4) If this is your first time running the tests, you will need to run `npm install` and `npm install --save-dev` in the `frontend` folder to install the required dependencies.
+5) Once the dependencies are installed, you can run `npm test` in the `frontend` folder to run the tests.
+
 ## Future Improvements:
-1. Implementing a user authentication system and a search bar to search for snippets by title.
-2. Code refactoring to improve code readability and maintainability.
-3. Increasing test coverage for frontend.
+1) Implementing a user authentication system and a search bar to search for snippets by title.
+2) Code refactoring to improve code readability and maintainability.
+3) Increasing test coverage for frontend.
 
 
 ## Instructions to run the application:

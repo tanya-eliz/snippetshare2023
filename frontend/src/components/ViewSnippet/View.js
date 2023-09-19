@@ -55,7 +55,7 @@ export const View = () => {
     }
 
     return (
-        <div>
+        <div data-testid = "view">
             {
                 isPending ? 
                 <div>Loading...</div> : 
@@ -98,3 +98,5 @@ export const View = () => {
         </div>
     )
 }
+
+export default View

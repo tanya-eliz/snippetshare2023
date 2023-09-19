@@ -88,7 +88,7 @@ export const Snippets = () => {
   }
 
   return (
-      <div className="snippets-page">
+      <div data-testid = "snippets" className="snippets-page">
 
         <Grid container spacing={2} sx={{marginBottom: 1.5}}>
           <Grid item xs={10}>

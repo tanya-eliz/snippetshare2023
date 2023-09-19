@@ -102,7 +102,7 @@ There are currently only 3 API endpoints to serve the frontend application. The 
 1) Automated tests are implemented using Jest and MongoDB Memory Server.
 2) The tests are located in the `tests` folder in this backend repository.
 3) To run the tests, you will need to have the backend application running on your machine. As in memory MongoDB is used for testing, you do not need to have MongoDB installed on your machine nor do you need the docker containers to be running. But you will need to have Node.js installed on your machine.
-4) If this is your first time running the tests, you will need to run `npm install` in the `backend` folder to install the required dependencies.
+4) If this is your first time running the tests, you will need to run `npm install` and `npm install --save-dev` in the `backend` folder to install the required dependencies.
 5) Once the dependencies are installed, you can run `npm test` in the `backend` folder to run the tests.
 
 ## Future Improvements:
