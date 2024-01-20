@@ -1,4 +1,4 @@
-# SnippetShare2023
+# Snippet Share 2023
 
 ## Introduction
 This is a full stack application built using the MERN stack (MongoDB, Express, React and Node.js).
