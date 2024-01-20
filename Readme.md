@@ -1,8 +1,7 @@
-# Govtech TAP 2023 Take Home Assignment
-
+# SnippetShare2023
 
 ## Introduction
-This is a full stack application to serve as a take home assignment for Govtech TAP 2023. The application is built using the MERN stack (MongoDB, Express, React and Node.js).
+This is a full stack application built using the MERN stack (MongoDB, Express, React and Node.js).
 
 
 The purpose of this application is to allow users to create snippets of text that will expire after a certain amount of time. The snippets will be stored in a database and the frontend application will be able to retrieve the snippets from the database and display them to the user.
