@@ -2,7 +2,7 @@
 
 ## Design Thinking Process: Figma Planning
 
-[View Figma Design](https://l1nq.com/govtech-figma-tanya)
+[View Figma Design]([https://l1nq.com/govtech-figma-tanya](https://www.figma.com/file/IaWuNKthplI6NdOV6QEb9x/snippet-share?type=design&node-id=0%3A1&mode=design&t=ad5AvEB1XYTgvXQ0-1))
 
 
 1. **Page 1: Create Snippets**
